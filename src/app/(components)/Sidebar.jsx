@@ -1,83 +1,75 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const SIDEBAR_ITEMS = [
+    {
+        id: 1,
+        label: "Trending",
+        icon: "/assets/icons/trending.svg",
+        href: "/",
+        active: true,
+    },
+    {
+        id: 2,
+        label: "New Releases",
+        icon: "/assets/icons/newRelease.svg",
+        href: "/",
+        active: false,
+    },
+    {
+        id: 3,
+        label: "Coming Soon",
+        icon: "/assets/icons/commingSoon.svg",
+        href: "/",
+        active: false,
+    },
+    {
+        id: 4,
+        label: "Favourites",
+        icon: "/assets/icons/favourite.svg",
+        href: "/",
+        active: false,
+    },
+    {
+        id: 5,
+        label: "Watch Later",
+        icon: "/assets/icons/watchLater.svg",
+        href: "/",
+        active: false,
+    },
+];
+
 export default function Sidebar() {
     return (
         <div>
             <aside className="sticky top-[88px]">
                 <ul className="space-y-2">
-                    <li>
-                        <Link
-                            className="flex items-center space-x-2 px-5 py-3.5 rounded-lg bg-primary text-black"
-                            href="/"
-                        >
-                            <Image
-                                src="./assets/icons/trending.svg"
-                                width={24}
-                                height={24}
-                                alt=""
-                            />
-                            <span>Trending</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            className="flex items-center space-x-2 px-5 py-3.5 rounded-lg"
-                            href="/"
-                        >
-                            <Image
-                                src="./assets/icons/newRelease.svg"
-                                width={24}
-                                height={24}
-                                alt=""
-                            />
-                            <span>New Releases</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            className="flex items-center space-x-2 px-5 py-3.5 rounded-lg"
-                            href="/"
-                        >
-                            <Image
-                                src="./assets/icons/commingSoon.svg"
-                                width={24}
-                                height={24}
-                                alt=""
-                            />
-                            <span>Coming Soon</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            className="flex items-center space-x-2 px-5 py-3.5 rounded-lg"
-                            href="/"
-                        >
-                            <Image
-                                src="./assets/icons/favourite.svg"
-                                width={24}
-                                height={24}
-                                alt=""
-                            />
-                            <span>Favourites</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            className="flex items-center space-x-2 px-5 py-3.5 rounded-lg"
-                            href="/"
-                        >
-                            <Image
-                                src="./assets/icons/watchLater.svg"
-                                width={24}
-                                height={24}
-                                alt=""
-                            />
-                            <span>Watch Later</span>
-                        </Link>
-                    </li>
+                    {SIDEBAR_ITEMS.map((item) => (
+                        <SidebarItem key={item.id} item={item} />
+                    ))}
                 </ul>
             </aside>
         </div>
+    );
+}
+
+function SidebarItem({ item }) {
+    return (
+        <li>
+            <Link
+                className={`flex items-center space-x-2 px-5 py-3.5 ${
+                    item.active ? "rounded-lg bg-primary text-black" : ""
+                }`}
+                href={item.href}
+            >
+                <Image
+                    src={item.icon}
+                    width={24}
+                    height={24}
+                    alt={item.label}
+                />
+                <span>{item.label}</span>
+            </Link>
+        </li>
     );
 }

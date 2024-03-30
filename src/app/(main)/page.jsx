@@ -1,6 +1,6 @@
 import MovieList from "../(components)/movie/MovieList";
 
-export default function Home() {
+export default async function Home() {
     return (
         <main>
             <MovieList />

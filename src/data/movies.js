@@ -1,4 +1,4 @@
-const movieList = {
+export const movieList = {
     page: 1,
     results: [
         {
