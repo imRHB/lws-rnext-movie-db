@@ -1,8 +1,8 @@
 import React from "react";
 
-import Footer from "../(components)/Footer";
-import Navbar from "../(components)/Navbar";
-import Sidebar from "../(components)/Sidebar";
+import Footer from "@/app/(components)/Footer";
+import Navbar from "@/app/(components)/Navbar";
+import Sidebar from "@/app/(components)/Sidebar";
 
 export const metadata = {
     title: "MovieDB | Learn With Sumit",

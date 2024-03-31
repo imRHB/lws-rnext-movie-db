@@ -1,0 +1,9 @@
+{
+    "release": "Release Date",
+    "average_vote": "Average Vote",
+    "total_vote": "Vote Count",
+    "total_popularity": "Popularity",
+    "hd_stream": "Stream in HD",
+    "hd_download": "Download in HD",
+    "card_label": "Details"
+}
