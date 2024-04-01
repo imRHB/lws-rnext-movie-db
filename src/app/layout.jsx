@@ -11,6 +11,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body className="bg-[#1D1E28] text-white">
                 {/* body className: 'dark:bg-body bg-white font-[Sora] dark:text-white text-dark' */}
+
                 {children}
             </body>
         </html>

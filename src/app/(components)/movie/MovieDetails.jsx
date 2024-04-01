@@ -1,5 +1,6 @@
-import { getDictionary } from "@/app/[lang]/dictionaries/dictionaries";
 import Image from "next/image";
+
+import { getDictionary } from "@/app/[lang]/(main)/movies/dictionaries/dictionaries";
 
 export default async function MovieDetails({ lang, movieId }) {
     const movieModule = await import("@/data/movies.json");
@@ -31,15 +32,13 @@ export default async function MovieDetails({ lang, movieId }) {
 
     return (
         <section>
-            <div>
-                <Image
-                    src={backdrop_path}
-                    height={500}
-                    width={500}
-                    className="w-full object-cover max-h-[300px] lg:max-h-[500px]"
-                    alt={title}
-                />
-            </div>
+            <Image
+                src={backdrop_path}
+                height={500}
+                width={500}
+                className="w-full object-cover max-h-[300px] lg:max-h-[500px]"
+                alt={title}
+            />
 
             <div className="grid grid-cols-12 gap-8 py-12">
                 <div className="col-span-2">

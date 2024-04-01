@@ -30,18 +30,29 @@ export default function Modal({ children }) {
 
     useEffect(() => {
         document.addEventListener("keydown", onKeyDown);
-        return () => document.removeEventListener("keydown", onKeyDown);
+        document.body.style.overflow = "hidden";
+
+        return () => {
+            document.removeEventListener("keydown", onKeyDown);
+            document.body.style.overflow = "";
+        };
     }, [onKeyDown]);
 
     return (
         <div
             ref={overlay}
-            className="fixed top-0 bottom-0 left-0 right-0 z-10 p-10 mx-auto bg-black/60"
+            className="fixed top-0 bottom-0 left-0 right-0 z-10 grid p-10 mx-auto overflow-hidden place-content-center bg-black/60"
             onClick={onClick}
         >
             <div
                 ref={wrapper}
-                className="absolute p-6 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:w-10/12 md:w-8/12 lg:w-2/5"
+                className="z-50 flex items-center justify-center max-w-6xl transition-opacity duration-300 place-items-center bg-body overflow-y-auto h-[80vh] max-h-[800px] rounded-lg"
+                style={{
+                    overflowY: "auto",
+                    scrollbarColor: "rgba(0, 0, 0, 0.2) transparent",
+                    scrollbarThumbColor: "#cccccc",
+                    scrollbarWidth: "none",
+                }}
             >
                 {children}
             </div>
