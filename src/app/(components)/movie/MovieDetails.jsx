@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
 import { getDictionary } from "@/app/[lang]/(main)/movies/dictionaries/dictionaries";
 
@@ -19,6 +20,9 @@ export default async function MovieDetails({ lang, movieId }) {
     const movie = movies.find(
         (movie) => movie.id.toString() === movieId.toString()
     );
+
+    if (!movie) notFound();
+
     const {
         title,
         backdrop_path,

@@ -18,7 +18,7 @@ export default function MainLayout({ children, movieModal }) {
                 <Navbar />
             </div>
 
-            <div className="container grid lg:grid-cols-[218px_1fr] gap-[3.5rem] mx-auto">
+            <div className="container grid lg:grid-cols-[218px_1fr] gap-[3.5rem] mx-auto my-4">
                 <Sidebar />
                 <main className="content">{children}</main>
             </div>

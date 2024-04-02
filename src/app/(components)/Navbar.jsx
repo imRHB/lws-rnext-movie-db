@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const logo = "/assets/logo.svg";
-const ringImage = "/assets/ring.svg";
-const sunImage = "/assets/icons/sun.svg";
-const cartImage = "/assets/shopping-cart.svg";
+import LanguageSwitcher from "./LanguageSwitcher";
+
+const logo = "/vercel.svg";
 
 export default function Navbar() {
     return (
@@ -19,7 +18,7 @@ export default function Navbar() {
                         className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
                         href="/"
                     >
-                        <Image src={ringImage} width={24} height={24} alt="" />
+                        <Image src={""} width={24} height={24} alt="Alert" />
                     </Link>
                 </li>
                 <li>
@@ -27,7 +26,7 @@ export default function Navbar() {
                         className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
                         href="/"
                     >
-                        <Image src={sunImage} width={24} height={24} alt="" />
+                        <Image src={""} width={24} height={24} alt="Sun" />
                     </Link>
                 </li>
                 <li>
@@ -35,10 +34,11 @@ export default function Navbar() {
                         className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
                         href="/"
                     >
-                        <Image src={cartImage} width={24} height={24} alt="" />
+                        <Image src={""} width={24} height={24} alt="Cart" />
                     </Link>
                 </li>
             </ul>
+            <LanguageSwitcher />
         </nav>
     );
 }
