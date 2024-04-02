@@ -37,8 +37,9 @@ export default function Navbar() {
                         <Image src={""} width={24} height={24} alt="Cart" />
                     </Link>
                 </li>
+
+                <LanguageSwitcher />
             </ul>
-            <LanguageSwitcher />
         </nav>
     );
 }

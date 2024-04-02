@@ -18,6 +18,9 @@ module.exports = {
                 light: "#fff",
                 body: "#1D1E28",
             },
+            fontFamily: {
+                sans: ["Sora", "sans-serif"],
+            },
         },
     },
     plugins: [],
