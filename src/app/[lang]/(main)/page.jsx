@@ -1,11 +1,12 @@
 import React from "react";
 
 import MovieCard from "@/app/(components)/movie/MovieCard";
+import { getMoviesCardData } from "@/lib";
 import { getDictionary } from "./movies/dictionaries/dictionaries";
 
 export default async function HomePage({ params: { lang } }) {
-    const movieModule = await import("@/data/movies.json");
-    const { results: movies } = await movieModule.default;
+    /* using selected movies data for card */
+    const movies = await getMoviesCardData();
 
     const dictionary = await getDictionary(lang);
 

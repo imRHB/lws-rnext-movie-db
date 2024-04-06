@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import LanguageSwitcher from "./LanguageSwitcher";
 
-const logo = "/vercel.svg";
+const logo = "/assets/logo.svg";
 
 export default function Navbar() {
     return (

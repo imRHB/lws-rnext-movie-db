@@ -2,24 +2,21 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 import { getDictionary } from "@/app/[lang]/(main)/movies/dictionaries/dictionaries";
+import { getMovieById } from "@/lib";
 
 export default async function MovieDetails({ lang, movieId }) {
-    const movieModule = await import("@/data/movies.json");
-    const { results: movies } = await movieModule.default;
+    const movie = await getMovieById(movieId);
 
     const dictionary = await getDictionary(lang);
     const {
         release,
+        genre,
         average_vote,
         total_vote,
         total_popularity,
         hd_stream,
         hd_download,
     } = dictionary;
-
-    const movie = movies.find(
-        (movie) => movie.id.toString() === movieId.toString()
-    );
 
     if (!movie) notFound();
 
@@ -29,6 +26,7 @@ export default async function MovieDetails({ lang, movieId }) {
         poster_path,
         overview,
         release_date,
+        genres,
         popularity,
         vote_average,
         vote_count,
@@ -61,6 +59,9 @@ export default async function MovieDetails({ lang, movieId }) {
                     <ul className="my-8 space-y-2 text-slate-300">
                         <li>
                             {release} : {release_date}
+                        </li>
+                        <li>
+                            {genre} : {genres.join(" / ")}
                         </li>
                         <li>
                             {average_vote} : {vote_average}

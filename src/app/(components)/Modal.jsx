@@ -46,7 +46,7 @@ export default function Modal({ children }) {
         >
             <div
                 ref={wrapper}
-                className="z-50 flex items-center justify-center max-w-6xl transition-opacity duration-300 place-items-center bg-body overflow-y-auto h-[80vh] max-h-[800px] rounded-lg"
+                className="z-50 flex items-center justify-center max-w-6xl transition-opacity duration-300 place-items-center bg-body overflow-y-auto h-[80vh] max-h-[800px] rounded-lg px-4"
                 style={{
                     overflowY: "auto",
                     scrollbarColor: "rgba(0, 0, 0, 0.2) transparent",

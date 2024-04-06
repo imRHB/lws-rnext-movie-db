@@ -19,6 +19,7 @@ export const movieList = {
             video: false,
             vote_average: 6.938,
             vote_count: 379,
+            genres: ["Action", "Adventure", "Animation", "Comedy", "Family"],
         },
         {
             adult: false,
@@ -38,6 +39,7 @@ export const movieList = {
             video: false,
             vote_average: 5.632,
             vote_count: 827,
+            genres: ["Action", "Fantasy"],
         },
         {
             adult: false,
@@ -57,6 +59,7 @@ export const movieList = {
             video: false,
             vote_average: 7.267,
             vote_count: 759,
+            genres: ["Action", "Thriller"],
         },
         {
             adult: false,
@@ -76,6 +79,7 @@ export const movieList = {
             video: false,
             vote_average: 7.5,
             vote_count: 81,
+            genres: ["Action", "Science Fiction", "Adventure"],
         },
         {
             adult: false,
@@ -95,6 +99,7 @@ export const movieList = {
             video: false,
             vote_average: 7.2,
             vote_count: 1253,
+            genres: ["Fantasy", "Action", "Adventure"],
         },
         {
             adult: false,
@@ -114,6 +119,13 @@ export const movieList = {
             video: false,
             vote_average: 6.288,
             vote_count: 40,
+            genres: [
+                "Action",
+                "Science Fiction",
+                "Adventure",
+                "Fantasy",
+                "Drama",
+            ],
         },
         {
             adult: false,
@@ -133,6 +145,7 @@ export const movieList = {
             video: false,
             vote_average: 7.16,
             vote_count: 212,
+            genres: ["Science Fiction", "Action", "Fantasy", "Adventure"],
         },
         {
             adult: false,
@@ -152,6 +165,7 @@ export const movieList = {
             video: false,
             vote_average: 7.273,
             vote_count: 130,
+            genres: ["Action", "Fantasy", "War"],
         },
         {
             adult: false,
@@ -171,6 +185,7 @@ export const movieList = {
             video: false,
             vote_average: 6.209,
             vote_count: 290,
+            genres: ["Action", "Horror", "Thriller"],
         },
         {
             adult: false,
@@ -190,6 +205,7 @@ export const movieList = {
             video: false,
             vote_average: 7.564,
             vote_count: 1017,
+            genres: ["Animation", "Action", "Adventure", "Comedy", "Family"],
         },
         {
             adult: false,
@@ -209,11 +225,12 @@ export const movieList = {
             video: false,
             vote_average: 8.4,
             vote_count: 2216,
+            genres: ["Science Fiction", "Action"],
         },
         {
             adult: false,
             backdrop_path:
-                "https://image.tmdb.org/t/p/original/mEoIDEiePnYj178H9znzbl9zvky.jpg",
+                "https://image.tmdb.org/t/p/original/xvk5AhfhgQcTuaCQyq3XqAnhEma.jpg",
             genre_ids: [28],
             id: 1006540,
             original_language: "en",
@@ -228,6 +245,7 @@ export const movieList = {
             video: false,
             vote_average: 5.075,
             vote_count: 20,
+            genres: ["Action"],
         },
         {
             adult: false,
@@ -247,82 +265,7 @@ export const movieList = {
             video: false,
             vote_average: 6.37,
             vote_count: 46,
-        },
-        {
-            adult: false,
-            backdrop_path:
-                "https://image.tmdb.org/t/p/original/oFS0DgInCdvYRwaPkl3BLpmIuq5.jpg",
-            genre_ids: [28, 80, 18, 9648, 878, 53],
-            id: 1013240,
-            original_language: "id",
-            original_title: "24 Jam Bersama Gaspar",
-            overview:
-                "With only 24 hours left to live, a private investigator follows a trail of confounding clues to uncover the disappearance of his childhood friend.",
-            popularity: 804.367,
-            poster_path:
-                "https://image.tmdb.org/t/p/original/8jJKM0ZR3GQo6E3CUkMKKVa4S8B.jpg",
-            release_date: "2023-10-06",
-            title: "24 Hours with Gaspar",
-            video: false,
-            vote_average: 7.095,
-            vote_count: 21,
-        },
-        {
-            adult: false,
-            backdrop_path:
-                "https://image.tmdb.org/t/p/original/xvk5AhfhgQcTuaCQyq3XqAnhEma.jpg",
-            genre_ids: [28, 12, 35],
-            id: 848538,
-            original_language: "en",
-            original_title: "Argylle",
-            overview:
-                "When the plots of reclusive author Elly Conway's fictional espionage novels begin to mirror the covert actions of a real-life spy organization, quiet evenings at home become a thing of the past. Accompanied by her cat Alfie and Aiden, a cat-allergic spy, Elly races across the world to stay one step ahead of the killers as the line between Conway's fictional world and her real one begins to blur.",
-            popularity: 655.519,
-            poster_path:
-                "https://image.tmdb.org/t/p/original/95VlSEfLMqeX36UVcHJuNlWEpwf.jpg",
-            release_date: "2024-01-31",
-            title: "Argylle",
-            video: false,
-            vote_average: 6.132,
-            vote_count: 725,
-        },
-        {
-            adult: false,
-            backdrop_path:
-                "https://image.tmdb.org/t/p/original/qVrS8bu1B7G1tgLTlCZQi4CFsTh.jpg",
-            genre_ids: [28, 53, 10752],
-            id: 969492,
-            original_language: "en",
-            original_title: "Land of Bad",
-            overview:
-                "When a Delta Force special ops mission goes terribly wrong, Air Force drone pilot Reaper has 48 hours to remedy what has devolved into a wild rescue operation. With no weapons and no communication other than the drone above, the ground mission suddenly becomes a full-scale battle when the team is discovered by the enemy.",
-            popularity: 768.397,
-            poster_path:
-                "https://image.tmdb.org/t/p/original/h3jYanWMEJq6JJsCopy1h7cT2Hs.jpg",
-            release_date: "2024-01-25",
-            title: "Land of Bad",
-            video: false,
-            vote_average: 7.119,
-            vote_count: 431,
-        },
-        {
-            adult: false,
-            backdrop_path:
-                "https://image.tmdb.org/t/p/original/47olX0FCvUCfAqlp8cK0O5fKLav.jpg",
-            genre_ids: [16, 35, 878],
-            id: 1239251,
-            original_language: "en",
-            original_title: "Megamind vs. the Doom Syndicate",
-            overview:
-                "Megamind's former villain team, The Doom Syndicate, has returned. Our newly crowned blue hero must now keep up evil appearances until he can assemble his friends (Roxanne, Ol' Chum and Keiko) to stop his former evil teammates from launching Metro City to the Moon.",
-            popularity: 729.8,
-            poster_path:
-                "https://image.tmdb.org/t/p/original/yRZfiG1QpRkBc7fAmxfcR7Md5EC.jpg",
-            release_date: "2024-03-01",
-            title: "Megamind vs. the Doom Syndicate",
-            video: false,
-            vote_average: 5.7,
-            vote_count: 137,
+            genres: ["Action", "Thriller"],
         },
         {
             adult: false,
@@ -342,12 +285,13 @@ export const movieList = {
             video: false,
             vote_average: 6.496,
             vote_count: 360,
+            genres: ["Science Fiction", "Action", "Crime"],
         },
         {
             adult: false,
             backdrop_path:
                 "https://image.tmdb.org/t/p/original/cu5Qk2QHxOyyMrD3Bq93DxgmJer.jpg",
-            genre_ids: [28, 80],
+            genre_ids: [878, 12],
             id: 1046090,
             original_language: "zh",
             original_title: "周處除三害",
@@ -361,6 +305,27 @@ export const movieList = {
             video: false,
             vote_average: 7.555,
             vote_count: 109,
+            genres: ["Science Fiction", "Adventure"],
+        },
+        {
+            adult: false,
+            backdrop_path:
+                "https://image.tmdb.org/t/p/original/47olX0FCvUCfAqlp8cK0O5fKLav.jpg",
+            genre_ids: [16, 35, 878],
+            id: 1239251,
+            original_language: "en",
+            original_title: "Megamind vs. the Doom Syndicate",
+            overview:
+                "Megamind's former villain team, The Doom Syndicate, has returned. Our newly crowned blue hero must now keep up evil appearances until he can assemble his friends (Roxanne, Ol' Chum and Keiko) to stop his former evil teammates from launching Metro City to the Moon.",
+            popularity: 729.8,
+            poster_path:
+                "https://image.tmdb.org/t/p/original/yRZfiG1QpRkBc7fAmxfcR7Md5EC.jpg",
+            release_date: "2024-03-01",
+            title: "Megamind vs. the Doom Syndicate",
+            video: false,
+            vote_average: 5.7,
+            vote_count: 137,
+            genres: ["Animation", "Comedy", "Science Fiction"],
         },
         {
             adult: false,
@@ -380,6 +345,7 @@ export const movieList = {
             video: false,
             vote_average: 6.833,
             vote_count: 12,
+            genres: ["Action"],
         },
     ],
     total_pages: 43265,

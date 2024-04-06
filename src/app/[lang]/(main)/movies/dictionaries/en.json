@@ -1,5 +1,6 @@
 {
     "release": "Release Date",
+    "genre": "Genre",
     "average_vote": "Average Vote",
     "total_vote": "Vote Count",
     "total_popularity": "Popularity",

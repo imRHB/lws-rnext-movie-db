@@ -6,7 +6,7 @@ import Star from "../Star";
 const tagImage = "/assets/tag.svg";
 
 export default function MovieCard({ movie, lang, label }) {
-    const { id, title, poster_path } = movie || {};
+    const { id, title, poster_path, genres } = movie || {};
 
     return (
         <figure className="p-4 border shadow-sm border-black/10 dark:border-white/10 rounded-xl">
@@ -22,7 +22,7 @@ export default function MovieCard({ movie, lang, label }) {
                     {title}
                 </h3>
                 <p className="text-[#575A6E] text-sm mb-2">
-                    Action/Adventure/Sci-fi
+                    {genres.join(" / ")}
                 </p>
                 <div className="flex items-center mb-5 space-x-1">
                     {[1, 2, 3, 4, 5].map((char) => (
