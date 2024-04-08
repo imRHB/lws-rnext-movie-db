@@ -1,9 +1,11 @@
 "use client";
 
 import Image from "next/image";
-
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
+
+const english = "/assets/icons/english.png";
+const bangla = "/assets/icons/bangla.png";
 
 export default function LanguageSwitcher() {
     const router = useRouter();
@@ -13,10 +15,12 @@ export default function LanguageSwitcher() {
         {
             code: "en",
             language: "English",
+            image: english,
         },
         {
             code: "bn",
             language: "Bangla",
+            image: bangla,
         },
     ];
     const found = languages.find((lang) => pathname.includes(lang.code));
@@ -58,28 +62,28 @@ export default function LanguageSwitcher() {
                     onClick={() => setShowMenu(!showMenu)}
                 >
                     <Image
-                        className="max-w-8"
-                        src="/bd.png"
+                        className="w-6 mr-2"
+                        src={selectedLanguage.image}
                         alt="bangla"
-                        height={100}
-                        width={165}
+                        height={64}
+                        width={64}
                     />
                     {selectedLanguage.language}
                 </button>
                 {showMenu && (
-                    <div className="absolute right-0 z-10 w-40 p-2 mt-2 rounded-md shadow-lg bg-body top-full ring-1 ring-black">
+                    <div className="absolute right-0 z-10 w-40 p-2 mt-2 rounded-md shadow-lg bg-body top-full ring-1 ring-white/10">
                         {languages.map((entry) => (
                             <li
                                 key={entry.code}
                                 onClick={() => handleLanguageChange(entry.code)}
-                                className="flex items-center gap-2 p-2 rounded-md cursor-pointer hover:bg-black"
+                                className="flex items-center gap-2 p-3 rounded-md cursor-pointer hover:bg-black"
                             >
                                 <Image
-                                    className="max-w-8"
-                                    src="/bd.png"
+                                    className="w-6 mr-2"
+                                    src={entry.image}
                                     alt="bangla"
-                                    height={100}
-                                    width={165}
+                                    height={64}
+                                    width={64}
                                 />
                                 {entry.language}
                             </li>

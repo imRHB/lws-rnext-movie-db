@@ -4,6 +4,9 @@ import Link from "next/link";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const logo = "/assets/logo.svg";
+const ring = "/assets/ring.svg";
+const sun = "/assets/icons/sun.svg";
+const cart = "/assets/shopping-cart.svg";
 
 export default function Navbar() {
     return (
@@ -18,7 +21,7 @@ export default function Navbar() {
                         className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
                         href="/"
                     >
-                        <Image src={""} width={24} height={24} alt="Alert" />
+                        <Image src={ring} width={24} height={24} alt="Alert" />
                     </Link>
                 </li>
                 <li>
@@ -26,7 +29,7 @@ export default function Navbar() {
                         className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
                         href="/"
                     >
-                        <Image src={""} width={24} height={24} alt="Sun" />
+                        <Image src={sun} width={24} height={24} alt="Sun" />
                     </Link>
                 </li>
                 <li>
@@ -34,7 +37,7 @@ export default function Navbar() {
                         className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
                         href="/"
                     >
-                        <Image src={""} width={24} height={24} alt="Cart" />
+                        <Image src={cart} width={24} height={24} alt="Cart" />
                     </Link>
                 </li>
 

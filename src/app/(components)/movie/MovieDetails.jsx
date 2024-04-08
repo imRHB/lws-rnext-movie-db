@@ -38,7 +38,7 @@ export default async function MovieDetails({ lang, movieId }) {
                 src={backdrop_path}
                 height={500}
                 width={500}
-                className="w-full object-cover max-h-[300px] lg:max-h-[500px]"
+                className="w-full object-cover max-h-[300px] lg:max-h-[500px] rounded"
                 alt={title}
             />
 
@@ -48,6 +48,7 @@ export default async function MovieDetails({ lang, movieId }) {
                         src={poster_path}
                         height={300}
                         width={300}
+                        className="rounded"
                         alt={title}
                     />
                 </div>
@@ -56,7 +57,7 @@ export default async function MovieDetails({ lang, movieId }) {
                         {title}
                     </h2>
                     <p className="my-2 italic text-slate-400">{overview}</p>
-                    <ul className="my-8 space-y-2 text-slate-300">
+                    <ul className="mt-8 space-y-2 text-slate-300">
                         <li>
                             {release} : {release_date}
                         </li>

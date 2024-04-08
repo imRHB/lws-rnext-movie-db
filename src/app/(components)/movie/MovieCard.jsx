@@ -32,6 +32,7 @@ export default function MovieCard({ movie, lang, label }) {
                 <Link
                     className="bg-primary rounded-lg py-2 px-5 flex items-center justify-center gap-2 text-[#171923] font-semibold text-sm"
                     href={`/${lang}/movies/${id}`}
+                    scroll={false}
                 >
                     <Image src={tagImage} height={14} width={14} alt="Tag" />
                     <span>{label}</span>
