@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 
 const SIDEBAR_ITEMS = [
     {
@@ -44,13 +45,13 @@ const SIDEBAR_ITEMS = [
     },
 ];
 
-export default function Sidebar() {
+export default function Sidebar({ lang }) {
     return (
         <div>
             <aside className="sticky top-[88px]">
                 <ul className="space-y-2">
                     {SIDEBAR_ITEMS.map((item) => (
-                        <SidebarItem key={item.id} item={item} />
+                        <SidebarItem key={item.id} item={item} lang={lang} />
                     ))}
                 </ul>
             </aside>
@@ -58,23 +59,30 @@ export default function Sidebar() {
     );
 }
 
-function SidebarItem({ item }) {
+function SidebarItem({ item, lang }) {
+    const children = (
+        <React.Fragment>
+            <Image src={item.icon} width={24} height={24} alt={item.label} />
+            <span className={`${!item.active && "cursor-default"}`}>
+                {item.label}
+            </span>
+        </React.Fragment>
+    );
+
     return (
         <li>
-            <Link
-                className={`flex items-center space-x-2 px-5 py-3.5 ${
-                    item.active ? "rounded-lg bg-primary text-black" : ""
-                }`}
-                href={item.href}
-            >
-                <Image
-                    src={item.icon}
-                    width={24}
-                    height={24}
-                    alt={item.label}
-                />
-                <span>{item.label}</span>
-            </Link>
+            {item.active ? (
+                <Link
+                    className="flex items-center space-x-2 px-5 py-3.5 rounded-lg bg-primary text-black"
+                    href={`${item.href}${lang}`}
+                >
+                    {children}
+                </Link>
+            ) : (
+                <div className="flex items-center space-x-2 px-5 py-3.5 opacity-75">
+                    {children}
+                </div>
+            )}
         </li>
     );
 }

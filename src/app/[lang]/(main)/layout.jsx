@@ -9,17 +9,17 @@ export const metadata = {
     description: "A movie collection website by LWS!",
 };
 
-export default function MainLayout({ children, movieModal }) {
+export default function MainLayout({ children, movieModal, params: { lang } }) {
     return (
         <React.Fragment>
             <div className="content">{movieModal}</div>
 
             <div className="sticky top-0 bg-body">
-                <Navbar />
+                <Navbar lang={lang} />
             </div>
 
             <div className="container grid lg:grid-cols-[218px_1fr] gap-[3.5rem] mx-auto my-4">
-                <Sidebar />
+                <Sidebar lang={lang} />
                 <main className="content">{children}</main>
             </div>
 

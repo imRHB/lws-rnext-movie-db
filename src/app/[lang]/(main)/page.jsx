@@ -5,7 +5,10 @@ import { getMoviesCardData } from "@/lib";
 import { getDictionary } from "./movies/dictionaries/dictionaries";
 
 export default async function HomePage({ params: { lang } }) {
-    /* using selected movies data for card */
+    /*
+        calling the getMoviesCardData function,
+        that returns selected properties for movie card
+    */
     const movies = await getMoviesCardData();
 
     const dictionary = await getDictionary(lang);
@@ -25,39 +28,3 @@ export default async function HomePage({ params: { lang } }) {
         </React.Fragment>
     );
 }
-
-/* 
-
-<div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-7">
-    {movies.map((movie) => (
-        <MovieCard
-            key={movie.id}
-            movie={movie}
-            lang={lang}
-            label={dictionary.card_label}
-        />
-    ))}
-</div>
-
-*/
-
-/* 
-
-<div className="grid grid-cols-1 gap-6 mt-10 auto-rows-max sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {photos.map((photo) => (
-                <Link
-                    key={photo.id}
-                    href={`/${lang}/photos/${photo.id}`}
-                    className="object-cover w-full aspect-square rounded-xl"
-                >
-                    <Image
-                        src={photo.imageSrc}
-                        height={500}
-                        width={500}
-                        alt={photo.name}
-                    />
-                </Link>
-            ))}
-        </div>
-
-*/

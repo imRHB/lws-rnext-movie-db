@@ -23,6 +23,7 @@ export default function LanguageSwitcher() {
             image: bangla,
         },
     ];
+
     const found = languages.find((lang) => pathname.includes(lang.code));
     const [selectedLanguage, setSelectedLanguage] = useState(
         found ?? languages[0]
@@ -38,21 +39,6 @@ export default function LanguageSwitcher() {
         setShowMenu(false);
         router.push(`/${lang}`);
     };
-
-    /* const handleLanguageChange = (lang) => {
-        if (lang !== selectedLanguage.code) {
-            setSelectedLanguage({
-                ...selectedLanguage,
-                code: lang,
-                language: lang === "en" ? "English" : "Bangla",
-            });
-            router.replace(
-                pathname.replace(`/${selectedLanguage.code}`, `/${lang}`)
-            );
-            router.refresh();
-        }
-        setShowMenu(false);
-    }; */
 
     return (
         <div className="flex items-center gap-4">

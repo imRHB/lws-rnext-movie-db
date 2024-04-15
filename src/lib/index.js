@@ -11,7 +11,9 @@ const movies = {
 
         return moviesModule.default;
     },
-    /* get movie by movie id */
+    /*
+        get movie by movie id
+    */
     movieById: async (movieId) => {
         const moviesModule = await import("../data/movies.json");
         const { results: movies } = await moviesModule;
